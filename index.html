@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="author" content="preet" />
+    <meta name="description" content="Movie Bank" />
+    <meta name="keywords" content="HTML,CSS,SEO,web,web development" />
+    <title>Movie Bank</title>
+    <link
+      rel="shortcut icon "
+      href="./assets/img/magical ((movie theater screen)).jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/styles/index.css" media="all" />
+    <script src="./assets/scripts/index.js" type="module"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <main>
+    <body>
+      <header>
+        <div class="container flexbox">
+          <div class="title">
+            <h1>
+              <img
+                class="header-icon"
+                src="./assets/img/ticket-g1065c1e40_1280.png"
+                alt="Tickets"
+              />Tickets
+            </h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#">Movies</a></li>
+              <li><a href="#">Theaters</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">My Account</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="container">
+        <div class="all-inputs">
+          <div class="movie-group">
+            <div class="glass">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input
+              type="text"
+              class="movie-input"
+              placeholder="Enter the movie name"
+            />
+          </div>
+
+          <div class="address-group">
+            <div class="location-icon">
+              <i class="fas fa-location"></i>
+            </div>
+            <input
+              type="text"
+              class="address-input"
+              placeholder="Your address"
+            />
+            <div class="search-btn-padding">
+              <button class="search-btn">SEARCH</button>
+            </div>
+          </div>
+        </div>
+        <div class="suggestions">
+          <div class="movie-suggestions"></div>
+          <div class="address-suggestions"></div>
+        </div>
+        <div class="movie-area"></div>
+      </section>
+    </body>
+  </main>
+</html>
