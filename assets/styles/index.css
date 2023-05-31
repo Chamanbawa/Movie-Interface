@@ -192,7 +192,7 @@ nav ul li + li {
 /*----------------Images Content---------------*/
 .movie-area{
 height: 1000px;
-  margin-top: 30px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 30px 20px;
@@ -255,4 +255,14 @@ height: 1000px;
 .suggested-city:hover{
   background-color: #ff833c;
   color: #fff;
+}
+.disable{
+  border-radius: 2px;
+  background-color: #fff;
+  height: 31px;
+}
+.now-playing{
+  color: #fff;
+  font-size: 20px;
+  margin-top: 10px;
 }

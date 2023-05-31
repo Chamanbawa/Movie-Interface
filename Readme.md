@@ -3,5 +3,5 @@
 
 ### Demo
 
-Click [here](https://chamanbawa.github.io/Movie-Interface/) to test your speed of typing 
+Click [here](https://chamanbawa.github.io/Movie-Interface/) to book your ticket.
 

@@ -106,23 +106,31 @@ onEvent('input',movieInput,function(){
         movieSuggestion.innerHTML = '';
     }
     const tolowercases = movieInput.value.toLowerCase();
-    const matchedMovies = tolowercases === ''? [] : moviesArr.filter(movie =>
+    const matchedmovies = tolowercases === ''? [] : moviesArr.filter(movie =>
       movie.toLowerCase().includes(tolowercases)
     );
 
     movieSuggestion.innerHTML = ''; 
-
-    matchedMovies.forEach(movie => {
+    if(tolowercases && matchedmovies.length === 0) {
+        const div = document.createElement('div');
+        div.classList.add("disable");
+        div.textContent = "Movie Not found";
+        movieSuggestion.appendChild(div);
+      }
+else{
+    matchedmovies.forEach(movie => {
       const div = document.createElement('div');
       div.classList.add("suggested-movie");
       div.innerHTML = movie;
       
+
       onEvent('click',div,function(){
           movieInput.value = movie;
           movieSuggestion.innerHTML = '';
         })
         movieSuggestion.appendChild(div);
     });
+}
   });
 
 
@@ -133,13 +141,22 @@ onEvent('input',movieInput,function(){
     onEvent('input',addressInput,function(){
       const tolowercases = addressInput.value.toLowerCase();
 
-       const matchedCities = tolowercases === ''? [] :citiesArr.filter(city =>
+       const matchedcities = tolowercases === ''? [] :citiesArr.filter(city =>
         city.toLowerCase().includes(tolowercases)
       );
 
       addressSuggestion.innerHTML = ''; 
 
-      matchedCities.forEach(city => {
+      if(tolowercases && matchedcities.length === 0) {
+        const div = document.createElement('div');
+        div.classList.add("disable");
+        div.textContent = "City Not found";
+        addressSuggestion.appendChild(div);
+        
+
+      }
+else{
+      matchedcities.forEach(city => {
         const div = document.createElement('div');
         div.classList.add("suggested-city");
         div.innerHTML = city;
@@ -147,11 +164,11 @@ onEvent('input',movieInput,function(){
         onEvent('click',div,function(){
             addressInput.value = city;
             addressSuggestion.innerHTML = '';
-          })
+          });
 
         addressSuggestion.appendChild(div);
-        
-    });
+         
+    });}
 });
 
 //#endregion
