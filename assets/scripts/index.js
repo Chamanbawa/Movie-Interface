@@ -118,7 +118,7 @@ onEvent('input',movieInput,function(){
       div.innerHTML = movie;
       
       onEvent('click',div,function(){
-          movieInput.innerHTML = movie;
+          movieInput.value = movie;
           movieSuggestion.innerHTML = '';
         })
         movieSuggestion.appendChild(div);
@@ -144,10 +144,10 @@ onEvent('input',movieInput,function(){
         div.classList.add("suggested-city");
         div.innerHTML = city;
 
-        div.addEventListener('click', function() {
+        onEvent('click',div,function(){
             addressInput.value = city;
-            addressSuggestion.innerHTML = ''; // Clear suggestions after selection
-          });
+            addressSuggestion.innerHTML = '';
+          })
 
         addressSuggestion.appendChild(div);
         
